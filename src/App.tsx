@@ -1,10 +1,11 @@
+import Intro from "./components/Intro"
 
 function App() {
 
   return (
-     <div className="bg-black ">
-      Hello mate!
-    </div>
+    <>
+    <Intro />
+    </>
   )
 }
 

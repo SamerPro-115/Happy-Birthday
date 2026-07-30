@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+
+
+* {
+  font-family: "Vibes", system-ui;
+  font-style: normal;
+}
+
+
+
+
+.lemonada-uniquifier{
+  font-family: "Lemonada", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}

@@ -1,0 +1,45 @@
+// import { useGSAP } from "@gsap/react"
+import { useGSAP } from "@gsap/react";
+import { createMasterTimeline } from "../animations/masterTimeline";
+
+export default function Intro() {
+  useGSAP(() => {
+    const master = createMasterTimeline();
+
+    master.play();
+  }, []);
+
+  return (
+    <section className="">
+      <div className="h-screen w-full bg-black" />
+
+      {/* Text container */}
+<div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2  ">
+    <h1 className="text-1 text-white text-3xl vibes-regular text-1">احم</h1>
+</div>
+
+{/* <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2  ">
+    <h1 className="text-white text-7xl vibes-regular p-0 m-0 dot">.</h1>
+    <h1 className="text-white text-7xl vibes-regular p-0 m-0 dot">.</h1>
+    <h1 className="text-white text-7xl vibes-regular p-0 m-0 dot">.</h1>
+</div> */}
+
+<div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <h1 className="text-2 text-white text-4xl vibes-regular ">ليه الدنيا ظلام هنا؟</h1>
+</div>
+
+<div className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
+    <h1 className="text-3 text-white text-3xl vibes-regular tracking-widest w-full text-center">تقدر تشغل النور؟</h1>
+</div>
+
+<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
+   <img src="/images/light.png" className="w-28 m-auto light"/>
+</div>
+
+<div className="absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
+    <h1 className="text-4 text-white text-xs lemonada-uniquifier  w-full text-center">.اضغط على المصباح الكهربائي</h1>
+</div>
+
+    </section>
+  );
+}
