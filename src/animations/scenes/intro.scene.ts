@@ -20,23 +20,7 @@ export default function introScene() {
       ease: "power4.in"
     })
 
-    // .from(".dot", {
-    //     opacity: 0,
-    //   duration: 1,
-    //    ease: "power2.inOut",
-    //    stagger: {
-    //     each: 0.5
-    //    }
-    // })
-    
-    // .to(".dot", {
-    //     opacity: 0,
-    //   duration: 1,
-    //   ease: "power2.inOut",
-    //   stagger: {
-    //     each: 0.5
-    //   }
-    // })
+
     
       .from(".text-2", {
         opacity: 0,
@@ -67,14 +51,17 @@ export default function introScene() {
   duration: 1,
     })
 
-.to(".light", {
-          duration: 1,
-          scale: 0.9,
-          repeat: -1,
-          yoyo: true
-    })
 
-     .from(".text-4", {
+    // This is independent animation outside the timeline cuz it has loop.
+    // To not break the timeline flow so the pasue can work properly.
+gsap.to(".light", {
+    scale: 0.9,
+    duration: 1,
+    repeat: -1,
+    yoyo: true
+})
+
+     tl.from(".text-4", {
         opacity: 0,
       duration: 0.5,
        ease: "power2.inOut"

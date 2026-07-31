@@ -10,10 +10,8 @@ export default function OpeningScene() {
 
    tl.to(".light", {
      opacity: 0,
-     duration: 1,
-     scale: 0.9,
-     repeat: -1,
-     yoyo: true,
+     duration: 2,
+     ease: "power2.inOut"
    })
 
      .to(".text-4", {
@@ -21,5 +19,7 @@ export default function OpeningScene() {
        duration: 0.5,
        ease: "power2.inOut",
      }, "<");
+
+     return tl
 
  }
