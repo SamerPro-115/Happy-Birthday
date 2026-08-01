@@ -3,7 +3,7 @@
 import gsap from "gsap"
 import introScene from "./scenes/intro.scene"
 import { STORY_LABELS } from "../utils/labels";
-import OpeningScene from "./scenes/opening.scene";
+import OpeningScene from "./scenes/darkRoom.scene";
 
 
 export type StoryController = {
