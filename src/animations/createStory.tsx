@@ -19,10 +19,9 @@ export function createStory(): StoryController {
         // paused: true
     })
 
-
     
 
-       .addLabel(STORY_LABELS.INTRO)
+       master.addLabel(STORY_LABELS.INTRO)
        .add(introScene())
 
         .addPause("lightClicked")

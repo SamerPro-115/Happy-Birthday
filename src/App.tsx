@@ -9,7 +9,7 @@ function App() {
 
 
 const story = useRef<StoryController | null>(null);
-
+const hallAudioRef = useRef<HTMLAudioElement | null>(null);
 
 
     useGSAP(() => {
@@ -17,15 +17,16 @@ const story = useRef<StoryController | null>(null);
     }, []);
 
     const continueStory = () => {
-    story.current?.resume();
+    story.current?.resume();  
 };
   
+
 
   return (
     <>
    {/* <Intro onLightClick={continueStory} /> */}
-    <DarkRoom onDoorClick={continueStory} />
-    <Hall />
+    <DarkRoom onDoorClick={continueStory} hallAudioRef={hallAudioRef}/>
+    <Hall onDoorClick={continueStory} hallAudioRef={hallAudioRef}  />
     </>
   )
 }

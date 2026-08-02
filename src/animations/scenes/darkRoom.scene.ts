@@ -79,23 +79,18 @@ export default function darkRoomScene() {
   //    },)
  
 
-         tl.to(".text-8", {
-       opacity: 0,
-       duration: 1,
-       ease: "power4.in"
-      })
+  //       .to(".text-8", {
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: "power4.in"
+  //    })
 
              
  tl.from(".door", {
         opacity: 0,
-  duration: 1,
+  duration: 0.2,
     })
 
-        .from(".text-9", {
-      opacity: 0,
-      duration: 0.6,
-      ease: "power2.inOut"
-     }, "<")
 
 
   
@@ -104,12 +99,17 @@ export default function darkRoomScene() {
     // To not break the timeline flow so the pasue can work properly.
 gsap.to(".door", {
     scale: 0.9,
-    duration: 1.2,
+    duration: 1,
     repeat: -1,
     yoyo: true
 })
     
 
+
+        tl.from(".text-9", {
+      opacity: 0,
+      ease: "power2.inOut"
+     }, "<")
         
      
 
