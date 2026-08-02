@@ -1,16 +1,18 @@
 // import { useGSAP } from "@gsap/react"
-import { useGSAP } from "@gsap/react";
-import { createStory, type StoryController } from "../animations/createStory";
 import { useRef } from "react";
 
-export default function Intro() {
 
-    const story = useRef<StoryController | null>(null);
+type IntroProps = {
+    onLightClick: () => void
+}
+
+export default function Intro({onLightClick}: IntroProps) {
+
 
     const audioRef = useRef<HTMLAudioElement | null>(null);
     
     const handleLightOn = () => {
-        story.current?.resume();
+          onLightClick();
          if (audioRef.current) {
             audioRef.current.play();
         }
@@ -18,14 +20,7 @@ export default function Intro() {
 
 
 
-useGSAP(() => {
 
-    // Create story timeline and start it
-    story.current = createStory();
-
-    story.current.start();
-
-}, []);
 
 
   return (

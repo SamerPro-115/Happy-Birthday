@@ -4,6 +4,7 @@ import gsap from "gsap"
 import introScene from "./scenes/intro.scene"
 import { STORY_LABELS } from "../utils/labels";
 import OpeningScene from "./scenes/darkRoom.scene";
+import hallScene from "./scenes/hall.scene";
 
 
 export type StoryController = {
@@ -19,6 +20,8 @@ export function createStory(): StoryController {
     })
 
 
+    
+
        .addLabel(STORY_LABELS.INTRO)
        .add(introScene())
 
@@ -27,6 +30,12 @@ export function createStory(): StoryController {
 
         .addLabel(STORY_LABELS.OPENING)
        .add(OpeningScene())
+
+         .addPause("doorClicked")
+
+        .addLabel(STORY_LABELS.HALL)
+       .add(hallScene())
+
 
 
        // This is the controller of the story. 

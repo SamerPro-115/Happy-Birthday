@@ -1,14 +1,23 @@
 
+type DarkRoomProps = {
+    onDoorClick: () => void
+}
 
-export default function DarkRoom() {
+export default function DarkRoom({onDoorClick}: DarkRoomProps) {
+
+   const handleDoorClicked = () => {
+        onDoorClick()
+
+    }
+
   return (
     <>
       <img
-        src="/images/dark-room.jpg"
-        className="dark-room w-full  object-cover grayscale-10"
+        src="/images/dark-room.png"
+        className="dark-room w-full  object-fill brightness-[1.1] h-screen "
       />
 
-      <div className="absolute top-[70%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
+      {/* <div className="absolute top-[70%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
         <h1 className="text-5 text-white text-4xl vibes-regular gap-3 tracking-widest flex justify-center items-center" dir="rtl">
        المكان يخوف  
         </h1>
@@ -24,10 +33,10 @@ export default function DarkRoom() {
         <h1 className="text-7 text-white text-4xl vibes-regular tracking-widest" dir="rtl">
             خلينا نطلع برا
         </h1>
-      </div>
+      </div> */}
 
       <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
-   <img src="/images/door.png" className="w-36 m-auto door" />
+   <img src="/images/door.png" className="w-36 m-auto door" onClick={handleDoorClicked} />
 </div>
 
  <div className="absolute top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
