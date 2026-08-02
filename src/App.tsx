@@ -24,7 +24,7 @@ const hallAudioRef = useRef<HTMLAudioElement | null>(null);
 
   return (
     <>
-   {/* <Intro onLightClick={continueStory} /> */}
+   <Intro onLightClick={continueStory} />
     <DarkRoom onDoorClick={continueStory} hallAudioRef={hallAudioRef}/>
     <Hall onDoorClick={continueStory} hallAudioRef={hallAudioRef}  />
     </>

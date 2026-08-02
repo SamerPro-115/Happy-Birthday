@@ -61,8 +61,8 @@ export default function Hall({onDoorClick, hallAudioRef}: HallProps) {
         </h1>
       </div>
 
-      <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full z-99999">
-   <img src="/images/door.webp" className="w-23 m-auto door-2 z-99999 hidden" onClick={handleDoorClicked}  />
+      <div className="absolute top-[50%] left-1/2 -translate-x-1/2 z-99 -translate-y-1/2 w-full">
+   <img src="/images/door.webp" className="w-23 m-auto door-2 " onClick={handleDoorClicked}  />
 </div>
 
 <div className="absolute top-[64%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
