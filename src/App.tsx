@@ -4,16 +4,20 @@ import DarkRoom from "./components/DarkRoom"
 import Hall from "./components/Hall"
 import Intro from "./components/Intro"
 import { useGSAP } from "@gsap/react";
+import BackToDarkRoom from "./components/BackToDarkRoom";
 
 function App() {
 
 
 const story = useRef<StoryController | null>(null);
+
 const hallAudioRef = useRef<HTMLAudioElement | null>(null);
+
+const objectDropAudioref = useRef<HTMLAudioElement>(null!);
 
 
     useGSAP(() => {
-       story.current = createStory();
+       story.current = createStory(objectDropAudioref);
     }, []);
 
     const continueStory = () => {
@@ -24,9 +28,11 @@ const hallAudioRef = useRef<HTMLAudioElement | null>(null);
 
   return (
     <>
-   <Intro onLightClick={continueStory} />
+   {/* <Intro onLightClick={continueStory} />
     <DarkRoom onDoorClick={continueStory} hallAudioRef={hallAudioRef}/>
-    <Hall onDoorClick={continueStory} hallAudioRef={hallAudioRef}  />
+    <Hall onDoorClick={continueStory} hallAudioRef={hallAudioRef}  /> */}
+
+    <BackToDarkRoom objectDropAudioref={objectDropAudioref} />
     </>
   )
 }
