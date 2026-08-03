@@ -43,7 +43,7 @@ export default function Intro({onLightClick}: IntroProps) {
     <h1 className="text-3 text-white text-3xl vibes-regular tracking-widest w-full text-center">تقدر تشغل النور؟</h1>
 </div>
 
-<div className="absolute top-1/2 left-1/2 -translate-x-1/2 z-9999 -translate-y-1/2 w-full">
+<div className="absolute top-1/2 left-1/2 -translate-x-1/2 z-99999 -translate-y-1/2 w-full">
    <img src="/images/light.png" className="w-28 m-auto light" onClick={handleLightOn}/>
 </div>
 

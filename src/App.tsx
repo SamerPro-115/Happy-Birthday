@@ -28,9 +28,9 @@ const objectDropAudioref = useRef<HTMLAudioElement>(null!);
 
   return (
     <>
-   {/* <Intro onLightClick={continueStory} />
+   <Intro onLightClick={continueStory} />
     <DarkRoom onDoorClick={continueStory} hallAudioRef={hallAudioRef}/>
-    <Hall onDoorClick={continueStory} hallAudioRef={hallAudioRef}  /> */}
+    <Hall onDoorClick={continueStory} hallAudioRef={hallAudioRef}  />
 
     <BackToDarkRoom objectDropAudioref={objectDropAudioref} />
     </>

@@ -55,7 +55,7 @@ export default function DarkRoom({onDoorClick, hallAudioRef}: DarkRoomProps) {
         </h1>
       </div>
 
-      <div className="absolute door top-[50%] left-1/2 z-999 -translate-x-1/2 -translate-y-1/2 w-full">
+      <div className="absolute door top-[50%] left-1/2 z-9999 -translate-x-1/2 -translate-y-1/2 w-full">
    <img src="/images/door.webp" className="w-23 m-auto door" onClick={handleDoorClicked} />
 </div>
 

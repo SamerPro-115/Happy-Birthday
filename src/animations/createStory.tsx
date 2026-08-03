@@ -22,23 +22,25 @@ export function createStory(objectDropAudioref: React.RefObject<HTMLAudioElement
 
     
 
-    //    master.addLabel(STORY_LABELS.INTRO)
-    //    .add(introScene())
+        master.addLabel(STORY_LABELS.INTRO)
+        .add(introScene())
 
-    //     .addPause("lightClicked")
+         .addPause("lightClicked")
 
-    //     .addLabel(STORY_LABELS.OPENING)
-    //    .add(OpeningScene())
+         .addLabel(STORY_LABELS.OPENING)
+        .add(OpeningScene())
 
-    //      .addPause("roomDoorClicked")
+          .addPause("roomDoorClicked")
 
-    //     .addLabel(STORY_LABELS.HALL)
-    //    .add(hallScene())
+         .addLabel(STORY_LABELS.HALL)
+        .add(hallScene())
 
-    //    .addPause("hallDoorClicked")
+        .addPause("hallDoorClicked")
 
           .addLabel(STORY_LABELS.BACK_TO_DARK_ROOM)
        .add(backToDarkRoomScene(objectDropAudioref))
+
+       .addPause("giftClicked")
 
 
 
