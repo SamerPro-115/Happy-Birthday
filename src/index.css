@@ -25,10 +25,9 @@ body{
 
 .glowing-bg{
   border-radius: 50%;
-  background-color: #fff;
     box-shadow:
-    0 0 60px 30px #ffffff,
-    0 0 60px 20px rgb(247, 204, 76),
-    0 0 140px 40px rgb(225, 211, 61);
+    0 0 90px 50px #ffffff,
+    0 0 90px 40px rgb(247, 204, 76),
+    0 0 190px 60px rgb(225, 211, 61);
 }
 

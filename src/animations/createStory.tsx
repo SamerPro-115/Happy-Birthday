@@ -6,6 +6,7 @@ import { STORY_LABELS } from "../utils/labels";
 import OpeningScene from "./scenes/darkRoom.scene";
 import hallScene from "./scenes/hall.scene";
 import backToDarkRoomScene from "./scenes/backToDarkRoom";
+import  voidScene from "./scenes/void.scene";
 
 
 export type StoryController = {
@@ -22,18 +23,18 @@ export function createStory(objectDropAudioref: React.RefObject<HTMLAudioElement
 
     
 
-        master.addLabel(STORY_LABELS.INTRO)
-        .add(introScene())
+        // master.addLabel(STORY_LABELS.INTRO)
+        // .add(introScene())
 
-         .addPause("lightClicked")
+        //  .addPause("lightClicked")
 
-         .addLabel(STORY_LABELS.OPENING)
-        .add(OpeningScene())
+        //  .addLabel(STORY_LABELS.OPENING)
+        // .add(OpeningScene())
 
-          .addPause("roomDoorClicked")
+        //   .addPause("roomDoorClicked")
 
-         .addLabel(STORY_LABELS.HALL)
-        .add(hallScene())
+        //  .addLabel(STORY_LABELS.HALL)
+        // .add(hallScene())
 
         .addPause("hallDoorClicked")
 
@@ -41,6 +42,9 @@ export function createStory(objectDropAudioref: React.RefObject<HTMLAudioElement
        .add(backToDarkRoomScene(objectDropAudioref))
 
        .addPause("giftClicked")
+       
+          .addLabel(STORY_LABELS.INTO_THE_VOID)
+       .add(voidScene())
 
 
 

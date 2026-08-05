@@ -1,9 +1,22 @@
 
 type Props = {
-    objectDropAudioref: React.RefObject<HTMLAudioElement>
+    handleGiftClick: () => void,
+    bulidUpAudioRef: React.RefObject<HTMLAudioElement | null>
 }
 
-export default function BackToDarkRoom({objectDropAudioref}: Props) {
+export default function BackToDarkRoom({handleGiftClick, bulidUpAudioRef}: Props) {
+
+
+
+    //  const handleGiftClicked = () => {
+    //     handleGiftClick()
+
+    //     //  if (audioRef.current) {
+    //     //     audioRef.current.play();
+    //     // }
+
+
+    // }
 
 
 
@@ -14,7 +27,7 @@ export default function BackToDarkRoom({objectDropAudioref}: Props) {
           className="back-to-dark-room w-full  object-fill brightness-[1.1] h-screen "
         />
 
-        <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
+        {/* <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
           <h1
             className="text-15 text-white text-4xl vibes-regular tracking-widest"
             dir="rtl"
@@ -59,26 +72,28 @@ export default function BackToDarkRoom({objectDropAudioref}: Props) {
           >
             شوف ايش حصلت !
           </h1>
-        </div>
+        </div> */}
 
-        <div className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
+        {/* <div className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
           <h1
             className="text-20 text-white text-3xl vibes-regular tracking-widest letter"
             dir="rtl"
           >
             حصلت هدية
           </h1>
-        </div>
+        </div> */}
 
         <div className="absolute gift top-[50%] left-1/2 z-99 -translate-x-1/2 -translate-y-1/2 w-full">
-          <img src="/images/gift.webp" className="w-23 m-auto gift" />
+          <img src="/images/gift.webp" className="w-23 m-auto gift" onClick={handleGiftClick}/>
         </div>
 
         <div className="absolute top-[64%] left-1/2 -translate-x-1/2 z-9999  -translate-y-1/2 w-full">
     <h1 className="text-21 text-white text-xs lemonada-uniquifier  w-full text-center">اضغط على الهدية</h1>
 </div>
 
-        <div className="bg-white w-20 h-20 absolute  top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 glowing-bg" />
+        <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 glowing-bg" />
+
+        <audio src="/audio/build-up.mp3" ref={bulidUpAudioRef} /> 
       </>
     );
 }
