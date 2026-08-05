@@ -16,7 +16,10 @@ export type StoryController = {
   restart: () => void;
 };
 
-export function createStory(objectDropAudioref: React.RefObject<HTMLAudioElement>): StoryController {
+export function createStory(
+    objectDropAudioref: React.RefObject<HTMLAudioElement>,
+    intoTheVoidAudioref: React.RefObject<HTMLAudioElement>
+): StoryController {
     const master = gsap.timeline({
         // paused: true
     })
@@ -44,7 +47,7 @@ export function createStory(objectDropAudioref: React.RefObject<HTMLAudioElement
        .addPause("giftClicked")
        
           .addLabel(STORY_LABELS.INTO_THE_VOID)
-       .add(voidScene())
+       .add(voidScene(intoTheVoidAudioref))
 
 
 

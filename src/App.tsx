@@ -16,13 +16,13 @@ const story = useRef<StoryController | null>(null);
 const hallAudioRef = useRef<HTMLAudioElement | null>(null);
 
 const objectDropAudioref = useRef<HTMLAudioElement>(null!);
+const intoTheVoidAudioref = useRef<HTMLAudioElement>(null!);
 const giftAnimation = useRef<gsap.core.Tween | null>(null);
 
 
-const bulidUpAudioRef = useRef<HTMLAudioElement | null>(null);
 
     useGSAP(() => {
-       story.current = createStory(objectDropAudioref);
+       story.current = createStory(objectDropAudioref, intoTheVoidAudioref);
  giftAnimation.current = gsap.to(".gift", {
       scale: 0.9,
       duration: 1,
@@ -42,9 +42,9 @@ const bulidUpAudioRef = useRef<HTMLAudioElement | null>(null);
 
    giftAnimation.current = gsap.fromTo(
   ".gift",
-  { y: -5 },
+  { y: -4 },
   {
-    y: 5,
+    y: 4,
     duration: 0.1,
     repeat: -1,
     yoyo: true,
@@ -60,9 +60,6 @@ giftAnimation.current?.kill()
 
 
 
- if (bulidUpAudioRef.current) {
-            bulidUpAudioRef.current.play();
-        }
   };
   
 
@@ -73,9 +70,9 @@ giftAnimation.current?.kill()
     <DarkRoom onDoorClick={continueStory} hallAudioRef={hallAudioRef}/>
     <Hall onDoorClick={continueStory} hallAudioRef={hallAudioRef}  /> */}
 
-    <BackToDarkRoom handleGiftClick={handleGiftClick} bulidUpAudioRef={bulidUpAudioRef} />
+    <BackToDarkRoom handleGiftClick={handleGiftClick} />
 
-    <Void />
+    <Void intoTheVoidAudioref={intoTheVoidAudioref}/>
     </>
   )
 }

@@ -1,10 +1,9 @@
 
 type Props = {
     handleGiftClick: () => void,
-    bulidUpAudioRef: React.RefObject<HTMLAudioElement | null>
 }
 
-export default function BackToDarkRoom({handleGiftClick, bulidUpAudioRef}: Props) {
+export default function BackToDarkRoom({handleGiftClick}: Props) {
 
 
 
@@ -93,7 +92,6 @@ export default function BackToDarkRoom({handleGiftClick, bulidUpAudioRef}: Props
 
         <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 glowing-bg" />
 
-        <audio src="/audio/build-up.mp3" ref={bulidUpAudioRef} /> 
       </>
     );
 }
