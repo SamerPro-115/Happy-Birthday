@@ -5,8 +5,9 @@ import Hall from "./components/Hall"
 import Intro from "./components/Intro"
 import { useGSAP } from "@gsap/react";
 import BackToDarkRoom from "./components/BackToDarkRoom";
-import Void from "./components/Void";
+import Void from "./components/Celebration";
 import gsap from "gsap";
+import Celebration from "./components/Celebration";
 
 function App() {
 
@@ -16,13 +17,13 @@ const story = useRef<StoryController | null>(null);
 const hallAudioRef = useRef<HTMLAudioElement | null>(null);
 
 const objectDropAudioref = useRef<HTMLAudioElement>(null!);
-const intoTheVoidAudioref = useRef<HTMLAudioElement>(null!);
+const HBAudioref = useRef<HTMLAudioElement>(null!);
 const giftAnimation = useRef<gsap.core.Tween | null>(null);
 
 
 
     useGSAP(() => {
-       story.current = createStory(objectDropAudioref, intoTheVoidAudioref);
+       story.current = createStory(objectDropAudioref, HBAudioref);
  giftAnimation.current = gsap.to(".gift", {
       scale: 0.9,
       duration: 1,
@@ -72,7 +73,7 @@ giftAnimation.current?.kill()
 
     <BackToDarkRoom handleGiftClick={handleGiftClick} />
 
-    <Void intoTheVoidAudioref={intoTheVoidAudioref}/>
+    <Celebration HBAudioref={HBAudioref}/>
     </>
   )
 }

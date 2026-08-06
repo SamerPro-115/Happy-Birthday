@@ -6,7 +6,7 @@ import { STORY_LABELS } from "../utils/labels";
 import OpeningScene from "./scenes/darkRoom.scene";
 import hallScene from "./scenes/hall.scene";
 import backToDarkRoomScene from "./scenes/backToDarkRoom";
-import  voidScene from "./scenes/void.scene";
+import celebrationScene from "./scenes/celebration.scene";
 
 
 export type StoryController = {
@@ -18,7 +18,7 @@ export type StoryController = {
 
 export function createStory(
     objectDropAudioref: React.RefObject<HTMLAudioElement>,
-    intoTheVoidAudioref: React.RefObject<HTMLAudioElement>
+    HBAudioref: React.RefObject<HTMLAudioElement>
 ): StoryController {
     const master = gsap.timeline({
         // paused: true
@@ -46,8 +46,8 @@ export function createStory(
 
        .addPause("giftClicked")
        
-          .addLabel(STORY_LABELS.INTO_THE_VOID)
-       .add(voidScene(intoTheVoidAudioref))
+          .addLabel(STORY_LABELS.CELEBRATION)
+       .add(celebrationScene(HBAudioref))
 
 
 
