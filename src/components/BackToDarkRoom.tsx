@@ -12,7 +12,7 @@ export default function BackToDarkRoom({handleGiftClick, objectDropAudioref}: Pr
       <>
         <img
           src="/images/dark-room.png"
-          className="back-to-dark-room w-full  object-fill brightness-[1.1] h-screen "
+          className="back-to-dark-room w-full  lg:object-cover object-fill brightness-[1.1] h-screen "
         />
 
         <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">

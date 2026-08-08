@@ -31,7 +31,7 @@ export default function DarkRoom({onDoorClick, hallAudioRef}: DarkRoomProps) {
     <>
       <img
         src="/images/dark-room.png"
-        className="dark-room w-full  object-fill brightness-[1.1] h-screen "
+        className="dark-room w-full  lg:object-cover object-fill brightness-[1.1] h-screen "
       />
 
             <audio src="/audio/open-door-sfx.mp3" ref={audioRef}  />

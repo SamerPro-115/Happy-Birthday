@@ -41,7 +41,7 @@ function startDisco() {
     gsap.set(light, {
       rotation: rotations[i],
       autoAlpha: 0,
-      backgroundColor: discoColors[i % discoColors.length],
+      backgroundColor: discoColors[i],
     });
 
     // Light flicker
@@ -145,7 +145,7 @@ function stopDisco() {
 export default function disco() {
   const tl = gsap.timeline();
 
-  // Beat
+  // Disco start 
   tl.call(startDisco, [], 11.5);
 
   return tl;
