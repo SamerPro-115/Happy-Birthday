@@ -7,6 +7,7 @@ import OpeningScene from "./scenes/darkRoom.scene";
 import hallScene from "./scenes/hall.scene";
 import backToDarkRoomScene from "./scenes/backToDarkRoom";
 import celebrationScene from "./scenes/celebration.scene";
+import disco from "./disco";
 
 
 export type StoryController = {
@@ -26,28 +27,30 @@ export function createStory(
 
     
 
-        // master.addLabel(STORY_LABELS.INTRO)
-        // .add(introScene())
+         master.addLabel(STORY_LABELS.INTRO)
+         .add(introScene())
 
-        //  .addPause("lightClicked")
+         .addPause("lightClicked")
 
-        //  .addLabel(STORY_LABELS.OPENING)
-        // .add(OpeningScene())
+          .addLabel(STORY_LABELS.OPENING)
+         .add(OpeningScene())
 
-        //   .addPause("roomDoorClicked")
+           .addPause("roomDoorClicked")
 
-        //  .addLabel(STORY_LABELS.HALL)
-        // .add(hallScene())
+          .addLabel(STORY_LABELS.HALL)
+         .add(hallScene())
 
-        .addPause("hallDoorClicked")
+         .addPause("hallDoorClicked")
 
-          .addLabel(STORY_LABELS.BACK_TO_DARK_ROOM)
-       .add(backToDarkRoomScene(objectDropAudioref))
+           .addLabel(STORY_LABELS.BACK_TO_DARK_ROOM)
+        .add(backToDarkRoomScene(objectDropAudioref))
 
-       .addPause("giftClicked")
+        .addPause("giftClicked")
        
           .addLabel(STORY_LABELS.CELEBRATION)
        .add(celebrationScene(HBAudioref))
+
+       .add(disco())
 
 
 

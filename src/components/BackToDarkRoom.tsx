@@ -1,21 +1,10 @@
 
 type Props = {
     handleGiftClick: () => void,
+    objectDropAudioref: React.RefObject<HTMLAudioElement | null>
 }
 
-export default function BackToDarkRoom({handleGiftClick}: Props) {
-
-
-
-    //  const handleGiftClicked = () => {
-    //     handleGiftClick()
-
-    //     //  if (audioRef.current) {
-    //     //     audioRef.current.play();
-    //     // }
-
-
-    // }
+export default function BackToDarkRoom({handleGiftClick, objectDropAudioref}: Props) {
 
 
 
@@ -26,7 +15,7 @@ export default function BackToDarkRoom({handleGiftClick}: Props) {
           className="back-to-dark-room w-full  object-fill brightness-[1.1] h-screen "
         />
 
-        {/* <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
+        <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
           <h1
             className="text-15 text-white text-4xl vibes-regular tracking-widest"
             dir="rtl"
@@ -71,18 +60,18 @@ export default function BackToDarkRoom({handleGiftClick}: Props) {
           >
             شوف ايش حصلت !
           </h1>
-        </div> */}
+        </div>
 
-        {/* <div className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
+        <div className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
           <h1
             className="text-20 text-white text-3xl vibes-regular tracking-widest letter"
             dir="rtl"
           >
             حصلت هدية
           </h1>
-        </div> */}
+        </div>
 
-        <div className="absolute gift top-[50%] left-1/2 z-99 -translate-x-1/2 -translate-y-1/2 w-full">
+        <div className="absolute gift top-[50%] left-1/2 z-999 -translate-x-1/2 -translate-y-1/2 w-full">
           <img src="/images/gift.webp" className="w-23 m-auto gift" onClick={handleGiftClick}/>
         </div>
 

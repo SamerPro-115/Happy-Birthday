@@ -5,9 +5,9 @@ import Hall from "./components/Hall"
 import Intro from "./components/Intro"
 import { useGSAP } from "@gsap/react";
 import BackToDarkRoom from "./components/BackToDarkRoom";
-import Void from "./components/Celebration";
 import gsap from "gsap";
 import Celebration from "./components/Celebration";
+import { names } from "./utils/names";
 
 function App() {
 
@@ -21,6 +21,12 @@ const HBAudioref = useRef<HTMLAudioElement>(null!);
 const giftAnimation = useRef<gsap.core.Tween | null>(null);
 
 
+const params = new URLSearchParams(window.location.search);
+
+const nameKey = params.get("name")?.toLowerCase();
+
+// map single name string to expected string[] | null for Celebration
+const name = nameKey ? [names[nameKey as keyof typeof names]] : null;
 
     useGSAP(() => {
        story.current = createStory(objectDropAudioref, HBAudioref);
@@ -41,40 +47,24 @@ const giftAnimation = useRef<gsap.core.Tween | null>(null);
     giftAnimation.current?.kill();
     story.current?.resume();
 
-   giftAnimation.current = gsap.fromTo(
-  ".gift",
-  { y: -4 },
-  {
-    y: 4,
-    duration: 0.1,
-    repeat: -1,
-    yoyo: true,
-    ease: "bounce.inOut",
-  }
-);
-
-
-// Temporary solution to stop the up & down animation
-setTimeout(() => {
-giftAnimation.current?.kill()
-}, 2000)
-
-
+    setTimeout(() => {
+      document.title = "يوم ميلاد سعيد 🎉"
+    }, 2000)
 
   };
   
 
 
   return (
-    <>
-   {/* <Intro onLightClick={continueStory} />
+    <div className="overflow-hidden">
+   <Intro onLightClick={continueStory} />
     <DarkRoom onDoorClick={continueStory} hallAudioRef={hallAudioRef}/>
-    <Hall onDoorClick={continueStory} hallAudioRef={hallAudioRef}  /> */}
+    <Hall onDoorClick={continueStory} hallAudioRef={hallAudioRef}  />
 
-    <BackToDarkRoom handleGiftClick={handleGiftClick} />
+    <BackToDarkRoom handleGiftClick={handleGiftClick} objectDropAudioref={objectDropAudioref} />
 
-    <Celebration HBAudioref={HBAudioref}/>
-    </>
+    <Celebration HBAudioref={HBAudioref} name={name}/>
+    </div>
   )
 }
 

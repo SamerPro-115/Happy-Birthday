@@ -31,3 +31,171 @@ body{
     0 0 190px 60px rgb(225, 211, 61);
 }
 
+
+.cake-shadow{
+   filter:drop-shadow(4px 4px 3px gray);
+}
+
+.confetti {
+  width: 8px;
+  height: 14px;
+  border-radius: 2px;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #5ed7e7 30%,
+    #2bc4d6 60%,
+    #ffffff 100%
+  );
+
+  box-shadow:
+    0 0 4px rgba(255, 255, 255, 0.8),
+    inset 1px 0 1px rgba(255, 255, 255, 0.8);
+}
+
+.confetti:nth-child(4n) {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #ff6f91 40%,
+    #ff3f68 70%,
+    #ffffff
+  );
+}
+
+.confetti:nth-child(4n + 1) {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #5ed7e7 40%,
+    #2bc4d6 70%,
+    #ffffff
+  );
+}
+
+.confetti:nth-child(4n + 2) {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #ffd966 40%,
+    #f5b700 70%,
+    #ffffff
+  );
+}
+
+.confetti:nth-child(4n + 3) {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #b9a7ff 40%,
+    #8067e8 70%,
+    #ffffff
+  );
+}
+
+
+.balloon {
+  width: 42px;
+  height: 52px;
+  border-radius: 50% 50% 45% 45%;
+
+  background: radial-gradient(
+    circle at 30% 25%,
+    #ffffff 0%,
+    #5ed7e7 15%,
+    #2bc4d6 55%,
+    #1595a5 100%
+  );
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.15),
+    inset 4px 4px 8px rgba(255, 255, 255, 0.35);
+}
+
+.balloon::after {
+  content: "";
+  position: absolute;
+
+  width: 1px;
+  height: 90px;
+
+  background: rgba(80, 80, 80, 0.4);
+
+  left: 50%;
+  top: 100%;
+}
+
+.balloon:nth-child(2n) {
+  background: radial-gradient(
+    circle at 30% 25%,
+    #ffffff 0%,
+    #ff9bb0 15%,
+    #ff5577 55%,
+    #d92d52 100%
+  );
+}
+
+.balloon:nth-child(3n) {
+  background: radial-gradient(
+    circle at 30% 25%,
+    #ffffff 0%,
+    #ffe895 15%,
+    #ffd04a 55%,
+    #e6a900 100%
+  );
+}
+
+.balloon:nth-child(4n) {
+  background: radial-gradient(
+    circle at 30% 25%,
+    #ffffff 0%,
+    #c2b5ff 15%,
+    #8973ed 55%,
+    #5e48c7 100%
+  );
+}
+
+
+.hbd-text{
+   background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  background-size: contain;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQObom1ZZzmFBoKVXyv7FOLt2RQ8KBV95Xg81P0wE7Hg7aZvoO6Z-sqoNk&s=10);
+}
+
+.disco-light {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+
+  width: 35px;
+  height: 140%;
+  
+  transform-origin: top center;
+
+  opacity: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 229, 255, 0.7),
+    rgba(0, 229, 255, 0)
+  );
+
+  filter: blur(4px);
+
+  mix-blend-mode: screen;
+}
+
+
+
+.disco-overlay {
+  opacity: 0;
+  background: #00e5ff;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
