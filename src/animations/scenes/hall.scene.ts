@@ -12,7 +12,7 @@ export default function hallScene() {
     .to(
       ".text-8",
       {
-        opacity: 0,
+        autoAlpha: 0,
         duration: 0.6,
         ease: "power2.inOut",
       },
@@ -22,7 +22,7 @@ export default function hallScene() {
     .to(
       ".text-9",
       {
-        opacity: 0,
+        autoAlpha: 0,
         duration: 0.6,
         ease: "power2.inOut",
       },
@@ -32,7 +32,7 @@ export default function hallScene() {
     .to(
       ".dark-room",
       {
-        opacity: 0,
+        autoAlpha: 0,
         duration: 0.6,
         ease: "power2.inOut",
       },
@@ -61,49 +61,49 @@ export default function hallScene() {
   });
 
   tl.from(".text-10", {
-    opacity: 0,
+    autoAlpha: 0,
     duration: 1,
     ease: "power2.inOut",
   })
 
     .to(".text-10", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 3.5,
       ease: "power4.in",
     })
 
     .from(".text-11", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 2,
       ease: "power2.inOut",
     })
 
     .to(".text-11", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 3.5,
       ease: "power4.in",
     })
 
     .from(".text-12", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 2,
       ease: "power2.inOut",
     })
 
     .to(".text-12", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 3.5,
       ease: "power4.in",
     });
 
   tl.from(".text-13", {
-    opacity: 0,
+    autoAlpha: 0,
     duration: 2,
     ease: "power2.inOut",
   })
 
     .to(".text-13", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 3.5,
       ease: "power4.in",
     })
@@ -126,7 +126,7 @@ export default function hallScene() {
   });
 
   tl.from(".text-14", {
-    opacity: 0,
+    autoAlpha: 0,
     ease: "power2.inOut",
   });
 

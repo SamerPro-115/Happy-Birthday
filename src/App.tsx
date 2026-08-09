@@ -1,13 +1,14 @@
-import { useRef } from "react";
-import { createStory, type StoryController } from "./animations/createStory";
-import DarkRoom from "./components/DarkRoom"
-import Hall from "./components/Hall"
-import Intro from "./components/Intro"
+import { useEffect, useRef, useState } from "react";
+import { createStory, type StoryController } from "@/animations/createStory";
+import DarkRoom from "@/components/DarkRoom"
+import Hall from "@/components/Hall"
+import Intro from "@/components/Intro"
 import { useGSAP } from "@gsap/react";
-import BackToDarkRoom from "./components/BackToDarkRoom";
+import BackToDarkRoom from "@/components/BackToDarkRoom";
 import gsap from "gsap";
-import Celebration from "./components/Celebration";
-import { names } from "./utils/names";
+import Celebration from "@/components/Celebration";
+import { names } from "@/utils/names";
+import { preloadImages } from "./utils/preloadImages";
 
 function App() {
 
@@ -27,17 +28,49 @@ const nameKey = params.get("name")?.toLowerCase();
 
 // map single name string to expected string[] | null for Celebration
 const name = nameKey ? [names[nameKey as keyof typeof names]] : null;
+const [loading, setLoading] = useState(true);
 
-    useGSAP(() => {
-       story.current = createStory(objectDropAudioref, HBAudioref);
- giftAnimation.current = gsap.to(".gift", {
-      scale: 0.9,
-      duration: 1,
-      repeat: -1,
-      yoyo: true,
-    });
-       
-    }, []);
+
+
+
+// Wait for images to load so GSAP animation can work proparally with images
+useEffect(() => {
+  const init = async () => {
+    await preloadImages([
+      "/images/light.png",
+      "/images/door.webp",
+      "/images/cake.gif",
+      "/images/decoration.svg",
+      "/images/gift.webp",
+    ]);
+
+    setLoading(false);
+  };
+
+  init();
+}, []);
+
+ useGSAP(() => {
+  if (loading) return;
+
+  story.current = createStory(
+    objectDropAudioref,
+    HBAudioref
+  );
+
+  giftAnimation.current = gsap.to(".gift", {
+    scale: 0.9,
+    duration: 1,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+  });
+
+  return () => {
+    story.current?.pause();
+    giftAnimation.current?.kill();
+  };
+}, [loading]);
 
     const continueStory = () => {
     story.current?.resume();  
@@ -53,6 +86,16 @@ const name = nameKey ? [names[nameKey as keyof typeof names]] : null;
 
   };
   
+  if (loading) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-black">
+        <div className="text-center text-white" dir="rtl">
+          <p className="text-2xl">نحضّر لك شيئًا مميزًا...</p>
+          <p className="mt-2 text-sm opacity-60">لحظات فقط...</p>
+        </div>
+      </div>
+    );
+  }
 
 
   return (

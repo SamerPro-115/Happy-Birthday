@@ -4,36 +4,36 @@ export default function introScene() {
   const tl = gsap.timeline();
 
   tl.from(".text-1", {
-    opacity: 0,
+    autoAlpha: 0,
     duration: 1.5,
     ease: "power2.inOut",
   })
 
     .to(".text-1", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 2,
       ease: "power4.in",
     })
 
     .from(".text-2", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 1.5,
       ease: "power2.inOut",
     })
 
     .to(".text-2", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 3,
       ease: "power4.in",
     })
 
     .from(".text-3", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 1.5,
       ease: "power2.inOut",
     })
     .to(".text-3", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 2,
       ease: "power2.in",
     })
@@ -56,7 +56,7 @@ export default function introScene() {
   tl.from(
     ".text-4",
     {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 0.5,
       ease: "power2.inOut",
     },

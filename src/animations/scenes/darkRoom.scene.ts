@@ -31,7 +31,7 @@ export default function darkRoomScene() {
     .from(
       ".dark-room",
       {
-        opacity: 0,
+        autoAlpha: 0,
         duration: 0.4,
         ease: "power2.inOut",
       },
@@ -39,49 +39,49 @@ export default function darkRoomScene() {
     )
 
     .from(".text-5", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 4,
       ease: "power2.inOut",
     })
 
     .to(".text-5", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 3,
       ease: "power4.in",
     })
 
     .from(".text-6", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 2,
       ease: "power2.inOut",
     })
 
     .to(".text-6", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 3,
       ease: "power4.in",
     })
 
     .from(".text-7", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 2,
       ease: "power2.inOut",
     })
 
     .to(".text-7", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 3,
       ease: "power4.in",
     })
 
     .from(".text-8", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 2,
       ease: "power2.inOut",
     })
 
     .to(".text-8", {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 1,
       ease: "power4.in",
     });
@@ -103,7 +103,7 @@ export default function darkRoomScene() {
   tl.from(
     ".text-9",
     {
-      opacity: 0,
+      autoAlpha: 0,
       ease: "power2.inOut",
     },
     "<",

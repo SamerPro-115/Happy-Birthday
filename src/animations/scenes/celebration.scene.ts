@@ -66,7 +66,7 @@ export default function celebrationScene(HBAudioref: React.RefObject<HTMLAudioEl
        })
 
    .to(".text-21", {
-          opacity: 0,
+          autoAlpha: 0,
           duration: 0.6,
           ease: "power2.inOut",
    })

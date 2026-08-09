@@ -50,12 +50,12 @@ export default function Celebration({ HBAudioref, name }: Props) {
         className="lg:w-[30%] md:w-[70%] w-70 absolute top-[0%] decoration-2  -translate-x-1/2 -translate-y-1/2 left-1/2 "
       />
 
-      <h1
-        className="hbd-text h-[14%] lg:top-[37%] lemonada-uniquifier md:text-6xl text-3xl text-center absolute top-[32%] md:w-[65%] w-[80%]  -translate-x-1/2 -translate-y-1/2 left-1/2 text-white"
-        dir="rtl"
-      >
-        يوم ميلاد سعيد {name}
-      </h1>
+    <h1
+  className="story-text hbd-text top-[32%] lg:top-[37%] md:w-[65%] w-[80%] md:text-6xl text-3xl lemonada-uniquifier text-white"
+  dir="rtl"
+>
+  يوم ميلاد سعيد {name}
+</h1>
 
       <audio src="/audio/HBD-music.mp3" ref={HBAudioref} />
 

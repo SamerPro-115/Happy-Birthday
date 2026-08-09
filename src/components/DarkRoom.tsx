@@ -36,39 +36,54 @@ export default function DarkRoom({onDoorClick, hallAudioRef}: DarkRoomProps) {
 
             <audio src="/audio/open-door-sfx.mp3" ref={audioRef}  />
 
+<h1
+  className="story-text text-5 top-[70%] text-white text-4xl vibes-regular tracking-widest"
+  dir="rtl"
+>
+  المكان مظلم
+</h1>
 
-      <div className="absolute top-[70%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
-        <h1 className="text-5 text-white text-4xl vibes-regular gap-3 tracking-widest flex justify-center items-center" dir="rtl">
-       المكان مظلم  
-        </h1>
-      </div>
 
-       <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
-        <h1 className="text-6 text-white text-4xl vibes-regular tracking-widest" dir="rtl">
-      تدري . .
-        </h1>
-      </div>
+   <h1
+  className="story-text text-6 top-[60%] text-white text-4xl vibes-regular tracking-widest"
+  dir="rtl"
+>
+  تدري . .
+</h1>
 
-      <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
-        <h1 className="text-7 text-white text-4xl vibes-regular tracking-widest" dir="rtl">
-            خلينا نطلع برا
-        </h1>
-      </div>
+  <h1
+  className="story-text text-7 top-[60%] text-white text-4xl vibes-regular tracking-widest"
+  dir="rtl"
+>
+  خلينا نطلع برا
+</h1>
 
-      <div className="absolute door top-[50%] left-1/2 z-9999 -translate-x-1/2 -translate-y-1/2 w-full">
-   <img src="/images/door.webp" className="w-23 m-auto door" onClick={handleDoorClicked} />
-</div>
+<img
+  src="/images/door.webp"
+  className="
+    door
+    absolute
+    top-1/2
+    left-1/2
+    -translate-x-1/2
+    -translate-y-1/2
+    w-23
+  "
+  onClick={handleDoorClicked}
+/>
 
- <div className="absolute top-[20%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
-        <h1 className="text-8 text-white text-4xl vibes-regular tracking-widest" dir="rtl">
-          يمكن في احد برا ؟
-        </h1>
-      </div>
+<h1
+  className="story-text text-8 top-[20%] text-white text-4xl vibes-regular tracking-widest"
+  dir="rtl"
+>
+  يمكن في احد برا ؟
+</h1>
 
-      
-<div className="absolute top-[64%] left-1/2 -translate-x-1/2  -translate-y-1/2 w-full">
-    <h1 className="text-9 text-white text-xs lemonada-uniquifier  w-full text-center">اضغط على الباب</h1>
-</div>
+<h1
+  className="story-text text-9 top-[64%] text-white text-xs lemonada-uniquifier"
+>
+  اضغط على الباب
+</h1>
 
        <audio src="/audio/scary-sound.mp3"  ref={hallAudioRef} />
 
