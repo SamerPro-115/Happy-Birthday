@@ -1,5 +1,7 @@
 
 
+
+// A helper for forcing the images to load. (and wait for them)
 export const preloadImages = (images: string[]) => {
   return Promise.all(
     images.map(

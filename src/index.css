@@ -173,7 +173,7 @@ body{
   font-weight: bold;
   -webkit-text-fill-color: transparent;
   background-size: contain;
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQObom1ZZzmFBoKVXyv7FOLt2RQ8KBV95Xg81P0wE7Hg7aZvoO6Z-sqoNk&s=10);
+  background-image: url(/images/text-mask.jpg);
 }
 
 .disco-light {

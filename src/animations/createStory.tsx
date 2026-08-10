@@ -18,12 +18,9 @@ export type StoryController = {
 };
 
 export function createStory(
-    // objectDropAudioref: React.RefObject<HTMLAudioElement>,
     HBAudioref: React.RefObject<HTMLAudioElement>
 ): StoryController {
-    const master = gsap.timeline({
-        // paused: true
-    })
+    const master = gsap.timeline()
 
     
 

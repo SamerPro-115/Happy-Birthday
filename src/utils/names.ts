@@ -1,4 +1,7 @@
 
+
+// More names can be added. This is the name of the person you want the gift to goes to.
+// Example: https://domain.com?name=samer
 export const names = {
   mohammed: "محمد",
   ahmed: "أحمد",

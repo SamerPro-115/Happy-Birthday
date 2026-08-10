@@ -17,13 +17,11 @@ const story = useRef<StoryController | null>(null);
 
 const hallAudioRef = useRef<HTMLAudioElement | null>(null);
 
-// const objectDropAudioref = useRef<HTMLAudioElement>(null!);
 const HBAudioref = useRef<HTMLAudioElement>(null!);
 const giftAnimation = useRef<gsap.core.Tween | null>(null);
 
-
+// Get username from the url in order to write the gift in his/her name
 const params = new URLSearchParams(window.location.search);
-
 const nameKey = params.get("name")?.toLowerCase();
 
 // map single name string to expected string[] | null for Celebration
@@ -54,10 +52,10 @@ useEffect(() => {
   if (loading) return;
 
   story.current = createStory(
-    // objectDropAudioref,
     HBAudioref
   );
 
+  // Create gift animation from the start (you can refactor that to animate only when reach its scene)
   giftAnimation.current = gsap.to(".gift", {
     scale: 0.9,
     duration: 1,
@@ -80,6 +78,7 @@ useEffect(() => {
     giftAnimation.current?.kill();
     story.current?.resume();
 
+    // Change page title when user enter the celebration scene
     setTimeout(() => {
       document.title = "يوم ميلاد سعيد 🎉"
     }, 2000)

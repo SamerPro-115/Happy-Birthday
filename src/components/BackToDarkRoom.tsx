@@ -1,7 +1,6 @@
 
 type Props = {
     handleGiftClick: () => void,
-    // objectDropAudioref: React.RefObject<HTMLAudioElement | null>
 }
 
 export default function BackToDarkRoom({handleGiftClick}: Props) {
