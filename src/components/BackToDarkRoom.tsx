@@ -1,10 +1,10 @@
 
 type Props = {
     handleGiftClick: () => void,
-    objectDropAudioref: React.RefObject<HTMLAudioElement | null>
+    // objectDropAudioref: React.RefObject<HTMLAudioElement | null>
 }
 
-export default function BackToDarkRoom({handleGiftClick, objectDropAudioref}: Props) {
+export default function BackToDarkRoom({handleGiftClick}: Props) {
 
 
 
@@ -16,44 +16,44 @@ export default function BackToDarkRoom({handleGiftClick, objectDropAudioref}: Pr
         />
 
         <h1
-  className="story-text text-15 top-[30%] text-white text-4xl vibes-regular tracking-widest"
+  className="story-text text-15 top-[30%] text-white text-4xl vibes-regular "
   dir="rtl"
 >
   هووووف . .
 </h1>
 
 <h1
-  className="story-text text-16 top-[50%] text-white text-3xl vibes-regular tracking-widest letter"
+  className="story-text text-16 top-[50%] text-white text-3xl vibes-regular  letter"
   dir="rtl"
 >
   كان مكان غريب !
 </h1>
 
 <h1
-  className="story-text text-17 top-[30%] text-white text-3xl vibes-regular tracking-widest letter"
+  className="story-text text-17 top-[30%] text-white text-3xl vibes-regular  letter"
   dir="rtl"
 >
   دقيقة . .
 </h1>
 
-        <audio src="/audio/object-drops.mp3" ref={objectDropAudioref} />
+        {/* <audio src="/audio/object-drops.mp3" ref={objectDropAudioref} /> */}
 
        <h1
-  className="story-text text-18 top-[60%] text-white text-3xl vibes-regular tracking-widest letter"
+  className="story-text text-18 top-[60%] text-white text-3xl vibes-regular  letter"
   dir="rtl"
 >
   ايش هذا ؟
 </h1>
 
 <h1
-  className="story-text text-19 top-[50%] text-white text-3xl vibes-regular tracking-widest letter"
+  className="story-text text-19 top-[50%] text-white text-3xl vibes-regular  letter"
   dir="rtl"
 >
   شوف ايش حصلت !
 </h1>
 
 <h1
-  className="story-text text-20 top-[35%] text-white text-3xl vibes-regular tracking-widest letter"
+  className="story-text text-20 top-[35%] text-white text-3xl vibes-regular  letter"
   dir="rtl"
 >
   حصلت هدية

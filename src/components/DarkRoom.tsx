@@ -37,7 +37,7 @@ export default function DarkRoom({onDoorClick, hallAudioRef}: DarkRoomProps) {
             <audio src="/audio/open-door-sfx.mp3" ref={audioRef}  />
 
 <h1
-  className="story-text text-5 top-[70%] text-white text-4xl vibes-regular tracking-widest"
+  className="story-text text-5 top-[70%] text-white text-4xl vibes-regular "
   dir="rtl"
 >
   المكان مظلم
@@ -45,14 +45,14 @@ export default function DarkRoom({onDoorClick, hallAudioRef}: DarkRoomProps) {
 
 
    <h1
-  className="story-text text-6 top-[60%] text-white text-4xl vibes-regular tracking-widest"
+  className="story-text text-6 top-[60%] text-white text-4xl vibes-regular "
   dir="rtl"
 >
   تدري . .
 </h1>
 
   <h1
-  className="story-text text-7 top-[60%] text-white text-4xl vibes-regular tracking-widest"
+  className="story-text text-7 top-[60%] text-white text-4xl vibes-regular "
   dir="rtl"
 >
   خلينا نطلع برا
@@ -73,7 +73,7 @@ export default function DarkRoom({onDoorClick, hallAudioRef}: DarkRoomProps) {
 />
 
 <h1
-  className="story-text text-8 top-[20%] text-white text-4xl vibes-regular tracking-widest"
+  className="story-text text-8 top-[20%] text-white text-4xl vibes-regular "
   dir="rtl"
 >
   يمكن في احد برا ؟

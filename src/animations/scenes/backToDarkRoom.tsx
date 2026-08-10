@@ -1,7 +1,7 @@
 import gsap from "gsap";
 
 
-export default function backToDarkRoomScene(objectDropAudioref: React.RefObject<HTMLAudioElement>) {
+export default function backToDarkRoomScene() {
   const tl = gsap.timeline();
 
     tl.to(".door-2", {
@@ -96,13 +96,13 @@ export default function backToDarkRoomScene(objectDropAudioref: React.RefObject<
         ease: "power4.in",
       })
 
-        .call(() => {
-          objectDropAudioref.current?.play();
-      })
+//         .call(() => {
+//           objectDropAudioref.current?.play();
+//       })
 
- .to({}, {
-     duration: 6
- })
+//  .to({}, {
+//      duration: 6
+//  })
 
 
       .from(".text-19", {

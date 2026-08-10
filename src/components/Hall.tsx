@@ -36,7 +36,7 @@ export default function Hall({onDoorClick, hallAudioRef}: HallProps) {
 
 
 <h1
-  className="story-text text-10 top-[30%] text-white text-3xl vibes-regular tracking-widest"
+  className="story-text text-10 top-[30%] text-white text-3xl vibes-regular "
   dir="rtl"
 >
   امممم . .
@@ -45,7 +45,7 @@ export default function Hall({onDoorClick, hallAudioRef}: HallProps) {
 
       
 <h1
-  className="story-text text-11 top-[20%] text-white text-3xl vibes-regular tracking-widest"
+  className="story-text text-11 top-[20%] text-white text-3xl vibes-regular "
   dir="rtl"
 >
   الوقت متأخر يمكن للخروج
@@ -53,7 +53,7 @@ export default function Hall({onDoorClick, hallAudioRef}: HallProps) {
 
 
 <h1
-  className="story-text text-12 top-[60%] text-white text-3xl vibes-regular tracking-widest"
+  className="story-text text-12 top-[60%] text-white text-3xl vibes-regular "
   dir="rtl"
 >
   المكان يخوف . .
@@ -62,7 +62,7 @@ export default function Hall({onDoorClick, hallAudioRef}: HallProps) {
 
 
 <h1
-  className="story-text text-13 top-[50%] text-white text-3xl vibes-regular tracking-widest"
+  className="story-text text-13 top-[50%] text-white text-3xl vibes-regular "
   dir="rtl"
 >
   خلينا نرجع للداخل

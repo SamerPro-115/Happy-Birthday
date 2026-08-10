@@ -18,7 +18,7 @@ export type StoryController = {
 };
 
 export function createStory(
-    objectDropAudioref: React.RefObject<HTMLAudioElement>,
+    // objectDropAudioref: React.RefObject<HTMLAudioElement>,
     HBAudioref: React.RefObject<HTMLAudioElement>
 ): StoryController {
     const master = gsap.timeline({
@@ -43,7 +43,7 @@ export function createStory(
           .addPause("hallDoorClicked")
 
             .addLabel(STORY_LABELS.BACK_TO_DARK_ROOM)
-         .add(backToDarkRoomScene(objectDropAudioref))
+         .add(backToDarkRoomScene())
 
          .addPause("giftClicked")
        

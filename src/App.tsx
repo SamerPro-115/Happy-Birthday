@@ -17,7 +17,7 @@ const story = useRef<StoryController | null>(null);
 
 const hallAudioRef = useRef<HTMLAudioElement | null>(null);
 
-const objectDropAudioref = useRef<HTMLAudioElement>(null!);
+// const objectDropAudioref = useRef<HTMLAudioElement>(null!);
 const HBAudioref = useRef<HTMLAudioElement>(null!);
 const giftAnimation = useRef<gsap.core.Tween | null>(null);
 
@@ -54,7 +54,7 @@ useEffect(() => {
   if (loading) return;
 
   story.current = createStory(
-    objectDropAudioref,
+    // objectDropAudioref,
     HBAudioref
   );
 
@@ -104,7 +104,7 @@ useEffect(() => {
     <DarkRoom onDoorClick={continueStory} hallAudioRef={hallAudioRef}/>
     <Hall onDoorClick={continueStory} hallAudioRef={hallAudioRef}  />
 
-    <BackToDarkRoom handleGiftClick={handleGiftClick} objectDropAudioref={objectDropAudioref} />
+    <BackToDarkRoom handleGiftClick={handleGiftClick} />
 
     <Celebration HBAudioref={HBAudioref} name={name}/>
     </div>

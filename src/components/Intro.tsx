@@ -45,7 +45,7 @@ export default function Intro({onLightClick}: IntroProps) {
 </h1>
 
 <h1
-  className="story-text text-3 top-[35%] text-white text-3xl vibes-regular tracking-widest"
+  className="story-text text-3 top-[35%] text-white text-3xl vibes-regular"
   dir="rtl"
 >
   تقدر تشغل النور؟
