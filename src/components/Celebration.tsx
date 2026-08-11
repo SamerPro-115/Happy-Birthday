@@ -51,7 +51,7 @@ export default function Celebration({ HBAudioref, name }: Props) {
       />
 
     <h1
-  className="story-text hbd-text top-[32%] lg:top-[37%] md:w-[65%] w-[80%] md:text-6xl text-3xl lemonada-uniquifier text-white"
+  className="story-text h-[20%] hbd-text top-[34%] lg:top-[38%] md:w-[65%] w-[80%] md:text-6xl text-3xl lemonada-uniquifier text-white"
   dir="rtl"
 >
   يوم ميلاد سعيد {name}
